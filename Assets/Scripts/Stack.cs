@@ -2,6 +2,7 @@
 using OB.Events;
 using UnityEngine;
 using DG.Tweening;
+using UnityEditor;
 
 namespace OB.Game
 {
@@ -145,7 +146,7 @@ namespace OB.Game
             }
             else
             {
-                // The block was not placed on the stack. 
+                // The block was not placed on the stack.
                 _blockFactory.GenerateRigidbodyBlock(ref movingBlockBounds, transform);
                 _invokeEvents.BlockMissed.Invoke();
             }
